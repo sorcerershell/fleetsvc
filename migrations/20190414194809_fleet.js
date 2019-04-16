@@ -8,6 +8,7 @@ exports.up = function(knex, Promise) {
       table.string('licenseNumber');
       table.integer('capacity');
       table.date('registeredAt');
+      table.boolean('isDeleted').defaultTo(false);
     });
 };
 

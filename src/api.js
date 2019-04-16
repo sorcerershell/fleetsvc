@@ -10,6 +10,7 @@ module.exports = router => {
   // can be replaced by `insert(req.body)`.
   router.get('/fleet', listFleets);
   router.post('/fleet', registerFleet);
+  router.patch('/fleet/:fleetId', registerFleet);
   
 };
 

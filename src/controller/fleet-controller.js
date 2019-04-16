@@ -13,5 +13,16 @@ async function registerFleet(req, res) {
   res.send(result);
 }
 
+async function updateFleet(req, res) {
+  let id = req.params.fleetId;
+  const result = await fleetService.updateFleet(id, req.body);
+  res.send(result);
+}
+
+async function deleteFleet(req, res) {
+  let id = req.params.fleetId;
+  const result = await fleetService.delete(id);
+  res.send(result);
+}
 
 module.exports = { listFleets, registerFleet };
